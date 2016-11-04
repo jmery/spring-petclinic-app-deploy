@@ -1,0 +1,7 @@
+{
+  "id" : "app_details",
+  "version" : "1.0",
+  "artifact_location" : "https://s3-us-west-2.amazonaws.com/bjcpublic/spring-petclinic/petclinic-1.0.0.war",
+  "artifact_type" : "http",
+  "delivery_data" : ""
+}

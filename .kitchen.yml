@@ -1,20 +1,30 @@
 ---
 driver:
-  name: vagrant
+  name: ec2
+  aws_ssh_key_id: chef_demo
+  region: us-west-2
+  security_group_ids: sg-2560a741
+  associate_public_ip: true
+  instance_type: t2.micro
+  tags:
+    # Replace YOURNAME and YOURCOMPANY here
+    Name: "Chef Training Node for YOURNAME, YOURCOMPANY"
+    created-by: "test-kitchen"
+    user: <%= ENV['USER'] %>
 
 provisioner:
   name: chef_zero
-  # You may wish to disable always updating cookbooks in CI or other testing environments.
-  # For example:
-  #   always_update_cookbooks: <%= !ENV['CI'] %>
-  always_update_cookbooks: true
+  data_bags_path: "test/kitchen/data_bags"
 
 verifier:
   name: inspec
+  format: documentation
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7.2
+  - name: ubuntu-14.04
+    transport:
+      username: ubuntu
+      ssh_key: C:\Users\Administrator\.ssh\id_rsa
 
 suites:
   - name: default

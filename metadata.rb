@@ -1,15 +1,12 @@
 name 'spring-petclinic-app-deploy'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Sales Eng'
+maintainer_email 'saleseng@chef.io'
 license 'all_rights'
-description 'Installs/Configures spring-petclinic-app-deploy'
-long_description 'Installs/Configures spring-petclinic-app-deploy'
-version '0.1.0'
+description 'Deploys a Tomcat java application'
+long_description 'A simple cookbook to deploy a java application'
+source_url 'https://github.com/chef-cft/spring-petclinic-app-deploy'
+issues_url 'https://github.com/chef-cft/spring-petclinic-app-deploy/issues'
+version '0.2.6'
 
-# If you upload to Supermarket you should set this so your cookbook
-# gets a `View Issues` link
-# issues_url 'https://github.com/<insert_org_here>/spring-petclinic-app-deploy/issues' if respond_to?(:issues_url)
-
-# If you upload to Supermarket you should set this so your cookbook
-# gets a `View Source` link
-# source_url 'https://github.com/<insert_org_here>/spring-petclinic-app-deploy' if respond_to?(:source_url)
+depends 'tomcat', '~> 2.3.1'
+depends 'java'
