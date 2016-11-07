@@ -1,7 +1,51 @@
 {
-  "id" : "app_details",
-  "version" : "1.0",
-  "artifact_location" : "https://s3-us-west-2.amazonaws.com/bjcpublic/spring-petclinic/petclinic-1.0.0.war",
-  "artifact_type" : "http",
-  "delivery_data" : ""
+  "id": "app_details",
+  "version": "2016-11-07_2007",
+  "artifact_location": "https://s3-us-west-2.amazonaws.com/bjcpublic/spring-petclinic/spring-petclinic-2016-11-07_2007.war",
+  "artifact_checksum": "413c3e61fa944aee76ba455601a62f234843570308f7cd7550fdb9dd68db1c90",
+  "artifact_type": "http",
+  "delivery_data": {
+    "workspace_path": "/var/opt/delivery/workspace",
+    "workspace": {
+      "root": "/var/opt/delivery/workspace/automate.automate-demo.com/automate-demo/automate/spring-petclinic/master/build/publish",
+      "chef": "/var/opt/delivery/workspace/automate.automate-demo.com/automate-demo/automate/spring-petclinic/master/build/publish/chef",
+      "cache": "/var/opt/delivery/workspace/automate.automate-demo.com/automate-demo/automate/spring-petclinic/master/build/publish/cache",
+      "repo": "/var/opt/delivery/workspace/automate.automate-demo.com/automate-demo/automate/spring-petclinic/master/build/publish/repo",
+      "ssh_wrapper": "/var/opt/delivery/workspace/automate.automate-demo.com/automate-demo/automate/spring-petclinic/master/build/publish/bin/git_ssh"
+    },
+    "change": {
+      "enterprise": "automate-demo",
+      "organization": "automate",
+      "project": "spring-petclinic",
+      "pipeline": "master",
+      "change_id": "758ca7da-f9ab-43ae-b71e-981545f45b33",
+      "patchset_number": "latest",
+      "stage": "build",
+      "phase": "publish",
+      "git_url": "ssh://builder@automate-demo@automate.automate-demo.com:8989/automate-demo/automate/spring-petclinic",
+      "sha": "2faa315c5967b234f912ad7d6c00f658ef1ddded",
+      "patchset_branch": ""
+    },
+    "config": {
+      "build_cookbook": {
+        "name": "build_cookbook",
+        "path": ".delivery/build_cookbook"
+      },
+      "build_nodes": {
+
+      },
+      "delivery-truck": {
+        "publish": {
+          "chef_server": true
+        }
+      },
+      "dependencies": [
+
+      ],
+      "skip_phases": [
+        "security"
+      ],
+      "version": "2"
+    }
+  }
 }
